@@ -8,261 +8,236 @@ namespace ToyRobotTest
     {
                 
         [TestMethod]
-        public void IsValidPlaceTestZeroSizeTableTopZeroCoordinate() {
+        public void IsValidLocationTestZeroSizeTableTopZeroCoordinate() {
             var zeroSizeTableTop = new TableTop(0, 0);
 
-            var isValidPlace = zeroSizeTableTop.IsValidPlace(new Coordinate(0, 0));
+            var IsValidLocation = zeroSizeTableTop.IsValidLocation(new Coordinate(0, 0));
 
-            Assert.AreEqual(false, isValidPlace);
+            Assert.AreEqual(false, IsValidLocation);
         }
 
         [TestMethod]
-        public void IsValidPlaceTestZeroSizeTableTopNonZeroXCoordinate()
-        {
+        public void IsValidLocationTestZeroSizeTableTopNonZeroXCoordinate() {
             var zeroSizeTableTop = new TableTop(0, 0);
 
-            var isValidPlace = zeroSizeTableTop.IsValidPlace(new Coordinate(1, 0));
+            var IsValidLocation = zeroSizeTableTop.IsValidLocation(new Coordinate(1, 0));
 
-            Assert.AreEqual(false, isValidPlace);
+            Assert.AreEqual(false, IsValidLocation);
         }
 
         [TestMethod]
-        public void IsValidPlaceTestZeroSizeTableTopNonZeroYCoordinate()
-        {
+        public void IsValidLocationTestZeroSizeTableTopNonZeroYCoordinate() {
             var zeroSizeTableTop = new TableTop(0, 0);
 
-            var isValidPlace = zeroSizeTableTop.IsValidPlace(new Coordinate(0, 1));
+            var IsValidLocation = zeroSizeTableTop.IsValidLocation(new Coordinate(0, 1));
 
-            Assert.AreEqual(false, isValidPlace);
+            Assert.AreEqual(false, IsValidLocation);
         }
 
         [TestMethod]
-        public void IsValidPlaceTestZeroSizeTableTopNonZeroXYCoordinate()
-        {
+        public void IsValidLocationTestZeroSizeTableTopNonZeroXYCoordinate() {
             var zeroSizeTableTop = new TableTop(0, 0);
 
-            var isValidPlace = zeroSizeTableTop.IsValidPlace(new Coordinate(1, 1));
+            var IsValidLocation = zeroSizeTableTop.IsValidLocation(new Coordinate(1, 1));
 
-            Assert.AreEqual(false, isValidPlace);
+            Assert.AreEqual(false, IsValidLocation);
         }
 
         [TestMethod]
-        public void IsValidPlaceTestZeroSizeTableTopNegativeXCoordinate()
-        {
+        public void IsValidLocationTestZeroSizeTableTopNegativeXCoordinate() {
             var zeroSizeTableTop = new TableTop(0, 0);
 
-            var isValidPlace = zeroSizeTableTop.IsValidPlace(new Coordinate(-1, 0));
+            var IsValidLocation = zeroSizeTableTop.IsValidLocation(new Coordinate(-1, 0));
 
-            Assert.AreEqual(false, isValidPlace);
+            Assert.AreEqual(false, IsValidLocation);
         }
 
         [TestMethod]
-        public void IsValidPlaceTestZeroSizeTableTopNegativeYCoordinate()
-        {
+        public void IsValidLocationTestZeroSizeTableTopNegativeYCoordinate() {
             var zeroSizeTableTop = new TableTop(0, 0);
 
-            var isValidPlace = zeroSizeTableTop.IsValidPlace(new Coordinate(0, -1));
+            var IsValidLocation = zeroSizeTableTop.IsValidLocation(new Coordinate(0, -1));
 
-            Assert.AreEqual(false, isValidPlace);
+            Assert.AreEqual(false, IsValidLocation);
         }
 
         [TestMethod]
-        public void IsValidPlaceTestZeroSizeTableTopNegativeXYCoordinate()
-        {
+        public void IsValidLocationTestZeroSizeTableTopNegativeXYCoordinate() {
             var zeroSizeTableTop = new TableTop(0, 0);
 
-            var isValidPlace = zeroSizeTableTop.IsValidPlace(new Coordinate(-1, -1));
+            var IsValidLocation = zeroSizeTableTop.IsValidLocation(new Coordinate(-1, -1));
 
-            Assert.AreEqual(false, isValidPlace);
+            Assert.AreEqual(false, IsValidLocation);
         }
 
         [TestMethod]
-        public void IsValidPlaceTestSizeOneTableTopZeroCoordinate()
-        {
+        public void IsValidLocationTestSizeOneTableTopZeroCoordinate() {
             var zeroSizeTableTop = new TableTop(1, 1);
 
-            var isValidPlace = zeroSizeTableTop.IsValidPlace(new Coordinate(0, 0));
+            var IsValidLocation = zeroSizeTableTop.IsValidLocation(new Coordinate(0, 0));
 
-            Assert.AreEqual(true, isValidPlace);
+            Assert.AreEqual(true, IsValidLocation);
         }
 
         [TestMethod]
-        public void IsValidPlaceTestSizeOneTableTopNonZeroXCoordinate()
-        {
+        public void IsValidLocationTestSizeOneTableTopNonZeroXCoordinate() {
             var zeroSizeTableTop = new TableTop(1, 1);
 
-            var isValidPlace = zeroSizeTableTop.IsValidPlace(new Coordinate(1, 0));
+            var IsValidLocation = zeroSizeTableTop.IsValidLocation(new Coordinate(1, 0));
 
-            Assert.AreEqual(false, isValidPlace);
+            Assert.AreEqual(false, IsValidLocation);
         }
 
         [TestMethod]
-        public void IsValidPlaceTestSizeOneTableTopNonZeroYCoordinate()
-        {
+        public void IsValidLocationTestSizeOneTableTopNonZeroYCoordinate() {
             var zeroSizeTableTop = new TableTop(0, 0);
 
-            var isValidPlace = zeroSizeTableTop.IsValidPlace(new Coordinate(0, 1));
+            var IsValidLocation = zeroSizeTableTop.IsValidLocation(new Coordinate(0, 1));
 
-            Assert.AreEqual(false, isValidPlace);
+            Assert.AreEqual(false, IsValidLocation);
         }
 
         [TestMethod]
-        public void IsValidPlaceTestSizeOneTableTopNonZeroXYCoordinate()
-        {
+        public void IsValidLocationTestSizeOneTableTopNonZeroXYCoordinate() {
             var zeroSizeTableTop = new TableTop(0, 0);
 
-            var isValidPlace = zeroSizeTableTop.IsValidPlace(new Coordinate(1, 1));
+            var IsValidLocation = zeroSizeTableTop.IsValidLocation(new Coordinate(1, 1));
 
-            Assert.AreEqual(false, isValidPlace);
+            Assert.AreEqual(false, IsValidLocation);
         }
 
         [TestMethod]
-        public void IsValidPlaceTestSizeOneTableTopNegativeXCoordinate()
-        {
+        public void IsValidLocationTestSizeOneTableTopNegativeXCoordinate() {
             var zeroSizeTableTop = new TableTop(1, 1);
 
-            var isValidPlace = zeroSizeTableTop.IsValidPlace(new Coordinate(-1, 0));
+            var IsValidLocation = zeroSizeTableTop.IsValidLocation(new Coordinate(-1, 0));
 
-            Assert.AreEqual(false, isValidPlace);
+            Assert.AreEqual(false, IsValidLocation);
         }
 
         [TestMethod]
-        public void IsValidPlaceTestSizeOneTableTopNegativeYCoordinate()
-        {
+        public void IsValidLocationTestSizeOneTableTopNegativeYCoordinate() {
             var zeroSizeTableTop = new TableTop(0, 0);
 
-            var isValidPlace = zeroSizeTableTop.IsValidPlace(new Coordinate(0, -1));
+            var IsValidLocation = zeroSizeTableTop.IsValidLocation(new Coordinate(0, -1));
 
-            Assert.AreEqual(false, isValidPlace);
+            Assert.AreEqual(false, IsValidLocation);
         }
 
         [TestMethod]
-        public void IsValidPlaceTestSizeOneTableTopNegativeXYCoordinate()
-        {
+        public void IsValidLocationTestSizeOneTableTopNegativeXYCoordinate() {
             var zeroSizeTableTop = new TableTop(0, 0);
 
-            var isValidPlace = zeroSizeTableTop.IsValidPlace(new Coordinate(-1, -1));
+            var IsValidLocation = zeroSizeTableTop.IsValidLocation(new Coordinate(-1, -1));
 
-            Assert.AreEqual(false, isValidPlace);
+            Assert.AreEqual(false, IsValidLocation);
         }
 
         [TestMethod]
-        public void IsValidPlaceTestSizeFiveTableTopZeroXYCoordinate()
-        {
+        public void IsValidLocationTestSizeFiveTableTopZeroXYCoordinate() {
             var zeroSizeTableTop = new TableTop(5, 5);
 
-            var isValidPlace = zeroSizeTableTop.IsValidPlace(new Coordinate(0, 0));
+            var IsValidLocation = zeroSizeTableTop.IsValidLocation(new Coordinate(0, 0));
 
-            Assert.AreEqual(true, isValidPlace);
+            Assert.AreEqual(true, IsValidLocation);
         }
 
         [TestMethod]
-        public void IsValidPlaceTestSizeFiveTableNonZeroXCoordinateInsideBoundary()
-        {
+        public void IsValidLocationTestSizeFiveTableNonZeroXCoordinateInsideBoundary() {
             var zeroSizeTableTop = new TableTop(5, 5);
 
-            var isValidPlace = zeroSizeTableTop.IsValidPlace(new Coordinate(3, 0));
+            var IsValidLocation = zeroSizeTableTop.IsValidLocation(new Coordinate(3, 0));
 
-            Assert.AreEqual(true, isValidPlace);
+            Assert.AreEqual(true, IsValidLocation);
         }
 
         [TestMethod]
-        public void IsValidPlaceTestSizeFiveTableNegativeXCoordinate()
-        {
+        public void IsValidLocationTestSizeFiveTableNegativeXCoordinate() {
             var zeroSizeTableTop = new TableTop(5, 5);
 
-            var isValidPlace = zeroSizeTableTop.IsValidPlace(new Coordinate(-1, 0));
+            var IsValidLocation = zeroSizeTableTop.IsValidLocation(new Coordinate(-1, 0));
 
-            Assert.AreEqual(false, isValidPlace);
+            Assert.AreEqual(false, IsValidLocation);
         }
 
         [TestMethod]
-        public void IsValidPlaceTestSizeFiveTableNonZeroXCoordinateAtBoundary()
-        {
+        public void IsValidLocationTestSizeFiveTableNonZeroXCoordinateAtBoundary() {
             var zeroSizeTableTop = new TableTop(5, 5);
 
-            var isValidPlace = zeroSizeTableTop.IsValidPlace(new Coordinate(4, 0));
+            var IsValidLocation = zeroSizeTableTop.IsValidLocation(new Coordinate(4, 0));
 
-            Assert.AreEqual(true, isValidPlace);
+            Assert.AreEqual(true, IsValidLocation);
         }
 
         [TestMethod]
-        public void IsValidPlaceTestSizeFiveTableNonZeroXCoordinateAtBoundaryPlusOne()
-        {
+        public void IsValidLocationTestSizeFiveTableNonZeroXCoordinateAtBoundaryPlusOne() {
             var zeroSizeTableTop = new TableTop(5, 5);
 
-            var isValidPlace = zeroSizeTableTop.IsValidPlace(new Coordinate(5, 0));
+            var IsValidLocation = zeroSizeTableTop.IsValidLocation(new Coordinate(5, 0));
 
-            Assert.AreEqual(false, isValidPlace);
+            Assert.AreEqual(false, IsValidLocation);
         }
         [TestMethod]
-        public void IsValidPlaceTestSizeFiveTableNonZeroYCoordinateInsideBoundary()
-        {
+        public void IsValidLocationTestSizeFiveTableNonZeroYCoordinateInsideBoundary() {
             var zeroSizeTableTop = new TableTop(5, 5);
 
-            var isValidPlace = zeroSizeTableTop.IsValidPlace(new Coordinate(0, 3));
+            var IsValidLocation = zeroSizeTableTop.IsValidLocation(new Coordinate(0, 3));
 
-            Assert.AreEqual(true, isValidPlace);
+            Assert.AreEqual(true, IsValidLocation);
         }
 
         [TestMethod]
-        public void IsValidPlaceTestSizeFiveTableNegativeYCoordinate()
-        {
+        public void IsValidLocationTestSizeFiveTableNegativeYCoordinate() {
             var zeroSizeTableTop = new TableTop(5, 5);
 
-            var isValidPlace = zeroSizeTableTop.IsValidPlace(new Coordinate(0, -1));
+            var IsValidLocation = zeroSizeTableTop.IsValidLocation(new Coordinate(0, -1));
 
-            Assert.AreEqual(false, isValidPlace);
+            Assert.AreEqual(false, IsValidLocation);
         }
 
         [TestMethod]
-        public void IsValidPlaceTestSizeFiveTableNonZeroYCoordinateAtBoundary()
-        {
+        public void IsValidLocationTestSizeFiveTableNonZeroYCoordinateAtBoundary() {
             var zeroSizeTableTop = new TableTop(5, 5);
 
-            var isValidPlace = zeroSizeTableTop.IsValidPlace(new Coordinate(0, 4));
+            var IsValidLocation = zeroSizeTableTop.IsValidLocation(new Coordinate(0, 4));
 
-            Assert.AreEqual(true, isValidPlace);
+            Assert.AreEqual(true, IsValidLocation);
         }
 
         [TestMethod]
-        public void IsValidPlaceTestSizeFiveTableNonZeroYCoordinateAtBoundaryPlusOne()
-        {
+        public void IsValidLocationTestSizeFiveTableNonZeroYCoordinateAtBoundaryPlusOne() {
             var zeroSizeTableTop = new TableTop(5, 5);
 
-            var isValidPlace = zeroSizeTableTop.IsValidPlace(new Coordinate(0, 5));
+            var IsValidLocation = zeroSizeTableTop.IsValidLocation(new Coordinate(0, 5));
 
-            Assert.AreEqual(false, isValidPlace);
+            Assert.AreEqual(false, IsValidLocation);
         }
 
         [TestMethod]
-        public void IsValidPlaceTestSizeFiveTableNegativeXYCoordinate()
-        {
+        public void IsValidLocationTestSizeFiveTableNegativeXYCoordinate() {
             var zeroSizeTableTop = new TableTop(5, 5);
 
-            var isValidPlace = zeroSizeTableTop.IsValidPlace(new Coordinate(-1, -1));
+            var IsValidLocation = zeroSizeTableTop.IsValidLocation(new Coordinate(-1, -1));
 
-            Assert.AreEqual(false, isValidPlace);
+            Assert.AreEqual(false, IsValidLocation);
         }
 
         [TestMethod]
-        public void IsValidPlaceTestSizeFiveTableXYCoordinateBothInRange()
-        {
+        public void IsValidLocationTestSizeFiveTableXYCoordinateBothInRange() {
             var zeroSizeTableTop = new TableTop(5, 5);
 
-            var isValidPlace = zeroSizeTableTop.IsValidPlace(new Coordinate(2, 2));
+            var IsValidLocation = zeroSizeTableTop.IsValidLocation(new Coordinate(2, 2));
 
-            Assert.AreEqual(true, isValidPlace);
+            Assert.AreEqual(true, IsValidLocation);
         }
 
         [TestMethod]
-        public void IsValidPlaceTestSizeFiveTableXYCoordinateBothOutOFRange()
-        {
+        public void IsValidLocationTestSizeFiveTableXYCoordinateBothOutOFRange() {
             var zeroSizeTableTop = new TableTop(5, 5);
 
-            var isValidPlace = zeroSizeTableTop.IsValidPlace(new Coordinate(20, 20));
+            var IsValidLocation = zeroSizeTableTop.IsValidLocation(new Coordinate(20, 20));
 
-            Assert.AreEqual(false, isValidPlace);
+            Assert.AreEqual(false, IsValidLocation);
         }
     }
 }

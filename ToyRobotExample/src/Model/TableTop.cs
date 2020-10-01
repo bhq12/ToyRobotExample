@@ -4,18 +4,13 @@ using System.Text;
 
 namespace ToyRobotExample.src.Model
 {
-    public class TableTop
+    public class TableTop : TwoDimensionalSpace
     {
-        //Unsigned int as negative size tabletop is nonsensical
-        uint XSize { get; set; }
-        uint YSize { get; set; }
-
-        public TableTop(uint xSize, uint ySize) {
-            XSize = xSize;
-            YSize = ySize;
+        public TableTop(uint xSize, uint ySize) : base(xSize, ySize) {
+        
         }
 
-        public bool IsValidPlace(Coordinate coordinate) {
+        public bool IsValidLocation(Coordinate coordinate) {
 
             var isXInBounds = 0 <= coordinate.X && coordinate.X < XSize;
             var isYInBounds = 0 <= coordinate.Y && coordinate.Y < YSize;
