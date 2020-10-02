@@ -13,8 +13,7 @@ namespace ToyRobotExample.src.Model
 
         public Heading? CurrentHeading { get; private set; }
 
-        public bool IsPlaced { get; private set; };
-
+        public bool IsPlaced { get; private set; }
 
 
         public ToyRobot() {
