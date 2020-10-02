@@ -7,13 +7,13 @@ namespace ToyRobotExample.src.Model
 {
     public class ToyRobot
     {
-        public Coordinate? CurrentLocation { get; set; }
+        public Coordinate? CurrentLocation { get; private set; }
 
-        public TwoDimensionalSpace? CurrentSpace { get; set; }
+        public TwoDimensionalSpace? CurrentSpace { get; private set; }
 
-        public Heading? CurrentHeading { get; set; }
+        public Heading? CurrentHeading { get; private set; }
 
-        public bool IsPlaced;
+        public bool IsPlaced { get; private set; };
 
 
 
@@ -33,6 +33,24 @@ namespace ToyRobotExample.src.Model
             CurrentSpace = null;
             CurrentHeading = null;
             IsPlaced = false;
+        }
+
+        public void Rotate(bool isClockwiseDirection) {
+            if (!IsPlaced) {
+                return;
+            }
+
+            if (isClockwiseDirection) {
+                //Rotate 90° clockwise to the next valid heading
+                CurrentHeading = (Heading?)((int?)(CurrentHeading + 90) % 360);
+            } else {
+                //Rotate 90° anti clockwise to the next valid heading
+                CurrentHeading = (Heading?)((int?)(CurrentHeading - 90) % 360);
+
+                if (CurrentHeading < 0) {
+                    CurrentHeading += 360;
+                }
+            }
         }
     }
 }
