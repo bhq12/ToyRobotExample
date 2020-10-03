@@ -51,5 +51,31 @@ namespace ToyRobotExample.src.Model
                 }
             }
         }
+
+        public void Move(int places) {
+            if (!IsPlaced) {
+                return;
+            }
+
+            var newLocation = new Coordinate(CurrentLocation.X, CurrentLocation.Y);
+            switch (CurrentHeading) {
+                case Heading.NORTH:
+                    newLocation.Y += 1;
+                    break;
+                case Heading.EAST:
+                    newLocation.X += 1;
+                    break;
+                case Heading.SOUTH:
+                    newLocation.Y -= 1;
+                    break;
+                case Heading.WEST:
+                    newLocation.X -= 1;
+                    break;
+
+            }
+            if (CurrentSpace.IsValidLocation(newLocation)) {
+                CurrentLocation = newLocation;
+            }
+        }
     }
 }

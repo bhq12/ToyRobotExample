@@ -14,5 +14,18 @@ namespace ToyRobotExample.src.Model
             X = x;
             Y = y;
         }
+
+        public override bool Equals(object other) {
+
+            var comparator = other as Coordinate;
+            if (comparator is null) {
+                return false;
+            }
+
+            if (this.X == comparator.X && this.Y == comparator.Y) {
+                return true;
+            }
+            return false;
+        }
     }
 }

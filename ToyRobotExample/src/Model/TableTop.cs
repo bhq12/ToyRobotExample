@@ -10,7 +10,7 @@ namespace ToyRobotExample.src.Model
         
         }
 
-        public bool IsValidLocation(Coordinate coordinate) {
+        public override bool IsValidLocation(Coordinate coordinate) {
 
             var isXInBounds = 0 <= coordinate.X && coordinate.X < XSize;
             var isYInBounds = 0 <= coordinate.Y && coordinate.Y < YSize;
