@@ -17,6 +17,9 @@ namespace ToyRobotExample.src.Controller
             View = new ToyRobotTableTopSimulationView(simulation);
         }
 
+        /// <summary>
+        /// Runs the simulation. Waits on user input, then parses and performs associated action
+        /// </summary>
         public void RunSimulation() {
             while (true) {
                 var input = Console.ReadLine();
@@ -58,15 +61,27 @@ namespace ToyRobotExample.src.Controller
             }
         }
 
+        /// <summary>
+        /// Places the robot at a coordinate location with a direction heading
+        /// </summary>
+        /// <param name="location">The location.</param>
+        /// <param name="heading">The heading.</param>
         public void PlaceRobot(Coordinate location, Heading heading) {
             Simulation.ToyRobot.Place(location, Simulation.TableTop, heading);
         }
 
 
+        /// <summary>
+        /// Moves the robot one place according to the current heading
+        /// </summary>
         public void MoveRobot() {
             Simulation.ToyRobot.Move(1);
         }
 
+        /// <summary>
+        /// Rotates the robot by adjusting the heading
+        /// </summary>
+        /// <param name="direction">The direction of rotation.</param>
         public void RotateRobot(string direction) {
             if (direction == "RIGHT") {
                 Simulation.ToyRobot.Rotate(true);
@@ -76,6 +91,9 @@ namespace ToyRobotExample.src.Controller
             }
         }
 
+        /// <summary>
+        /// Refreshes the view.
+        /// </summary>
         public void RefreshView() {
             View.Refresh();
         }

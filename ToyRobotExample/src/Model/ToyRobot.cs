@@ -20,6 +20,13 @@ namespace ToyRobotExample.src.Model
             IsPlaced = false;
         }
 
+        /// <summary>
+        /// Places the robot at the specified location Coordinate in the specified TwoDimensionalSpace with the specified Heading.
+        /// </summary>
+        /// <param name="location">The location.</param>
+        /// <param name="space">The space.</param>
+        /// <param name="heading">The heading.</param>
+        /// <exception cref="ArgumentException">Attempted to place in invalid location</exception>
         public void Place(Coordinate location, TwoDimensionalSpace space, Heading heading) {
             if (!space.IsValidLocation(location)) {
                 throw new ArgumentException("Attempted to place in invalid location");
@@ -31,6 +38,9 @@ namespace ToyRobotExample.src.Model
             IsPlaced = true;
         }
 
+        /// <summary>
+        /// Unset robot spatial properties
+        /// </summary>
         public void UnPlace() {
             CurrentLocation = null;
             CurrentSpace = null;
@@ -38,6 +48,10 @@ namespace ToyRobotExample.src.Model
             IsPlaced = false;
         }
 
+        /// <summary>
+        /// Rotates the robot in the specified direction
+        /// </summary>
+        /// <param name="isClockwiseDirection">if set to <c>true</c> rotate the robot clockwise.</param>
         public void Rotate(bool isClockwiseDirection) {
             if (!IsPlaced) {
                 return;
@@ -56,6 +70,10 @@ namespace ToyRobotExample.src.Model
             }
         }
 
+        /// <summary>
+        /// Moves robot the specified number of places.
+        /// </summary>
+        /// <param name="places">The places.</param>
         public void Move(int places) {
             if (!IsPlaced) {
                 return;

@@ -13,6 +13,10 @@ namespace ToyRobotExample.src.View
             Simulation = simulation;
         }
 
+        /// <summary>
+        /// Refreshes view of the simulation.
+        /// Print the current simulation status to console
+        /// </summary>
         public void Refresh() {
             var x = Simulation.ToyRobot.CurrentLocation.X;
             var y = Simulation.ToyRobot.CurrentLocation.Y;

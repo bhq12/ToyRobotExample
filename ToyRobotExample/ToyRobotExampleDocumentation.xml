@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ToyRobotExample</name>
+    </assembly>
+    <members>
+        <member name="T:ToyRobotExample.src.Controller.ControllerOperation">
+            <summary>
+              Collection of operations that the controller can perform on the model
+            </summary>
+        </member>
+        <member name="M:ToyRobotExample.src.Controller.InputParser.SplitInstructionCommandArguments(System.String)">
+            <summary>
+            Splits the instruction into separate command and argument(s).
+            Format is: [command] [arguments]
+            Command separated by single space. Followed by comma separated arguments list
+            </summary>
+            <param name="instruction">User input instruction.</param>
+            <returns>
+              <br />
+            </returns>
+        </member>
+        <member name="M:ToyRobotExample.src.Controller.InputParser.ParseCommand(System.String)">
+            <summary>
+            Parses the command and returns associated ControllerOperation enum value
+            </summary>
+            <param name="commandName">Name of the command.</param>
+            <returns></returns>
+            <exception cref="T:System.FormatException">String was not recognised as valid robot command: '{commandName}'</exception>
+        </member>
+        <member name="M:ToyRobotExample.src.Controller.InputParser.SplitArguments(System.String)">
+            <summary>
+            Splits comma separated arguments into array of strings
+            </summary>
+            <param name="arguments">The comma separated arguments string</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToyRobotExample.src.Controller.InputParser.ParsePlaceLocationArguments(System.String[])">
+            <summary>
+            Parses the place location arguments.
+            </summary>
+            <param name="arguments">Array of x/y location strings arguments[0]: string representing X coordinate. arguments[1]: string representing Y coordinate</param>
+            <returns></returns>
+            <exception cref="T:System.FormatException">Input was not recognised as valid location. X: '{arguments[0]}', Y: {arguments[1]}</exception>
+        </member>
+        <member name="M:ToyRobotExample.src.Controller.ToyRobotTableTopSimulationController.RunSimulation">
+            <summary>
+            Runs the simulation. Waits on user input, then parses and performs associated action
+            </summary>
+        </member>
+        <member name="M:ToyRobotExample.src.Controller.ToyRobotTableTopSimulationController.PlaceRobot(ToyRobotExample.src.Model.Coordinate,ToyRobotExample.src.Model.Heading)">
+            <summary>
+            Places the robot at a coordinate location with a direction heading
+            </summary>
+            <param name="location">The location.</param>
+            <param name="heading">The heading.</param>
+        </member>
+        <member name="M:ToyRobotExample.src.Controller.ToyRobotTableTopSimulationController.MoveRobot">
+            <summary>
+            Moves the robot one place according to the current heading
+            </summary>
+        </member>
+        <member name="M:ToyRobotExample.src.Controller.ToyRobotTableTopSimulationController.RotateRobot(System.String)">
+            <summary>
+            Rotates the robot by adjusting the heading
+            </summary>
+            <param name="direction">The direction of rotation.</param>
+        </member>
+        <member name="M:ToyRobotExample.src.Controller.ToyRobotTableTopSimulationController.RefreshView">
+            <summary>
+            Refreshes the view.
+            </summary>
+        </member>
+        <member name="M:ToyRobotExample.src.Model.Coordinate.Equals(System.Object)">
+            <summary>
+            Override == operator for Coordinate object
+            Determines whether the specified <see cref="T:System.Object" />, is equal to this instance.
+            </summary>
+            <param name="other">The <see cref="T:System.Object" /> to compare with this instance.</param>
+            <returns>
+              <c>true</c> if the specified <see cref="T:System.Object" /> is equal to this instance; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="T:ToyRobotExample.src.Model.Heading">
+            <summary>
+            Collection of heading representations. Value is equal to the rotation of the heading measured in degrees clockwise from NORTH (zero)
+            </summary>
+        </member>
+        <member name="M:ToyRobotExample.src.Model.HeadingExtensions.HeadingToString(ToyRobotExample.src.Model.Heading)">
+            <summary>
+            Converts Heading enum values to associated string
+            </summary>
+            <param name="heading">The heading.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToyRobotExample.src.Model.HeadingExtensions.StringToHeading(System.String)">
+            <summary>
+            Converts Heading enum strings to associated enum value
+            </summary>
+            <param name="heading">The heading string representation</param>
+            <returns></returns>
+            <exception cref="T:System.FormatException">String was not recognised as valid heading: '{heading}'</exception>
+        </member>
+        <member name="M:ToyRobotExample.src.Model.TableTop.IsValidLocation(ToyRobotExample.src.Model.Coordinate)">
+            <summary>
+            Determines whether a coordinate within the boundaries of the tabletop
+            </summary>
+            <param name="coordinate">The coordinate.</param>
+            <returns>
+              <c>true</c> if [is valid location] [the specified coordinate]; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:ToyRobotExample.src.Model.ToyRobot.Place(ToyRobotExample.src.Model.Coordinate,ToyRobotExample.src.Model.TwoDimensionalSpace,ToyRobotExample.src.Model.Heading)">
+            <summary>
+            Places the robot at the specified location Coordinate in the specified TwoDimensionalSpace with the specified Heading.
+            </summary>
+            <param name="location">The location.</param>
+            <param name="space">The space.</param>
+            <param name="heading">The heading.</param>
+            <exception cref="T:System.ArgumentException">Attempted to place in invalid location</exception>
+        </member>
+        <member name="M:ToyRobotExample.src.Model.ToyRobot.UnPlace">
+            <summary>
+            Unset robot spatial properties
+            </summary>
+        </member>
+        <member name="M:ToyRobotExample.src.Model.ToyRobot.Rotate(System.Boolean)">
+            <summary>
+            Rotates the robot in the specified direction
+            </summary>
+            <param name="isClockwiseDirection">if set to <c>true</c> rotate the robot clockwise.</param>
+        </member>
+        <member name="M:ToyRobotExample.src.Model.ToyRobot.Move(System.Int32)">
+            <summary>
+            Moves robot the specified number of places.
+            </summary>
+            <param name="places">The places.</param>
+        </member>
+        <member name="M:ToyRobotExample.src.View.ToyRobotTableTopSimulationView.Refresh">
+            <summary>
+            Refreshes view of the simulation.
+            Print the current simulation status to console
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -8,6 +8,15 @@ namespace ToyRobotExample.src.Controller
     public static class InputParser
     {
 
+        /// <summary>
+        /// Splits the instruction into separate command and argument(s).
+        /// Format is: [command] [arguments]
+        /// Command separated by single space. Followed by comma separated arguments list
+        /// </summary>
+        /// <param name="instruction">User input instruction.</param>
+        /// <returns>
+        ///   <br />
+        /// </returns>
         public static string[] SplitInstructionCommandArguments(string instruction) {
 
             var firstSpaceIndex = instruction.IndexOf(' ');
@@ -22,7 +31,13 @@ namespace ToyRobotExample.src.Controller
 
             return new string[] { command, arguments };
         }
-        
+
+        /// <summary>
+        /// Parses the command and returns associated ControllerOperation enum value
+        /// </summary>
+        /// <param name="commandName">Name of the command.</param>
+        /// <returns></returns>
+        /// <exception cref="FormatException">String was not recognised as valid robot command: '{commandName}'</exception>
         public static ControllerOperation ParseCommand(string commandName) {
 
             if (commandName == "MOVE") {
@@ -42,10 +57,21 @@ namespace ToyRobotExample.src.Controller
             }
         }
 
+        /// <summary>
+        /// Splits comma separated arguments into array of strings
+        /// </summary>
+        /// <param name="arguments">The comma separated arguments string</param>
+        /// <returns></returns>
         public static string[] SplitArguments(string arguments) {
             return arguments.Split(',');
         }
 
+        /// <summary>
+        /// Parses the place location arguments.
+        /// </summary>
+        /// <param name="arguments">Array of x/y location strings arguments[0]: string representing X coordinate. arguments[1]: string representing Y coordinate</param>
+        /// <returns></returns>
+        /// <exception cref="FormatException">Input was not recognised as valid location. X: '{arguments[0]}', Y: {arguments[1]}</exception>
         public static Coordinate ParsePlaceLocationArguments(string[] arguments) {
             try {
                 var x = int.Parse(arguments[0]);

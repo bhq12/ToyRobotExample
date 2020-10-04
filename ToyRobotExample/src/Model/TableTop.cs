@@ -10,6 +10,13 @@ namespace ToyRobotExample.src.Model
         
         }
 
+        /// <summary>
+        /// Determines whether a coordinate within the boundaries of the tabletop
+        /// </summary>
+        /// <param name="coordinate">The coordinate.</param>
+        /// <returns>
+        ///   <c>true</c> if [is valid location] [the specified coordinate]; otherwise, <c>false</c>.
+        /// </returns>
         public override bool IsValidLocation(Coordinate coordinate) {
 
             var isXInBounds = 0 <= coordinate.X && coordinate.X < XSize;

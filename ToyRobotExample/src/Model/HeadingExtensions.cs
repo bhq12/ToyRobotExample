@@ -6,6 +6,11 @@ namespace ToyRobotExample.src.Model
 {
     public static class HeadingExtensions
     {
+        /// <summary>
+        /// Converts Heading enum values to associated string
+        /// </summary>
+        /// <param name="heading">The heading.</param>
+        /// <returns></returns>
         public static string HeadingToString(Heading heading) {
             switch (heading) {
                 case Heading.NORTH:
@@ -21,6 +26,12 @@ namespace ToyRobotExample.src.Model
             }
         }
 
+        /// <summary>
+        /// Converts Heading enum strings to associated enum value
+        /// </summary>
+        /// <param name="heading">The heading string representation</param>
+        /// <returns></returns>
+        /// <exception cref="FormatException">String was not recognised as valid heading: '{heading}'</exception>
         public static Heading StringToHeading(string heading) {
             if (heading == "NORTH") {
                 return Heading.NORTH;

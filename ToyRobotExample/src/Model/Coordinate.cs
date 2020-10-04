@@ -15,6 +15,14 @@ namespace ToyRobotExample.src.Model
             Y = y;
         }
 
+        /// <summary>
+        /// Override == operator for Coordinate object
+        /// Determines whether the specified <see cref="System.Object" />, is equal to this instance.
+        /// </summary>
+        /// <param name="other">The <see cref="System.Object" /> to compare with this instance.</param>
+        /// <returns>
+        ///   <c>true</c> if the specified <see cref="System.Object" /> is equal to this instance; otherwise, <c>false</c>.
+        /// </returns>
         public override bool Equals(object other) {
 
             var comparator = other as Coordinate;
