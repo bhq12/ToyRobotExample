@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Configuration;
+using System.Collections.Specialized;
 using ToyRobotExample.src.Controller;
 using ToyRobotExample.src.Model;
 
@@ -8,9 +10,13 @@ namespace ToyRobotExample
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Beginning Simulation!");
+            //Retrieve config variables from  CONFIG.xml
+            var tableXSize = uint.Parse(ConfigurationManager.AppSettings.Get("TABLE_X_SIZE"));
+            var tableYSize = uint.Parse(ConfigurationManager.AppSettings.Get("TABLE_Y_SIZE"));
 
-            var simulation = new ToyRobotTableTopSimulation(5, 5);
+            Console.WriteLine($"Beginning Simulation!\nTabletop size: {tableXSize} X {tableYSize}\nPlease type in commands followed by the ENTER key\nTo end the simulation use the commands QUIT or EXIT");
+
+            var simulation = new ToyRobotTableTopSimulation(tableXSize, tableYSize);
             var controller = new ToyRobotTableTopSimulationController(simulation);
 
             controller.RunSimulation();
