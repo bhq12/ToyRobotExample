@@ -182,7 +182,7 @@ namespace ToyRobotTest
 
             toyRobot.Move(1);
 
-            Assert.AreEqual(toyRobot.CurrentLocation, new Coordinate(0,1));
+            Assert.AreEqual(new Coordinate(0,1), toyRobot.CurrentLocation);
         }
 
         [TestMethod]
@@ -196,7 +196,7 @@ namespace ToyRobotTest
 
             toyRobot.Move(1);
 
-            Assert.AreEqual(toyRobot.CurrentLocation, new Coordinate(0, 0));
+            Assert.AreEqual(new Coordinate(0, 0), toyRobot.CurrentLocation);
         }
 
         [TestMethod]
@@ -210,7 +210,7 @@ namespace ToyRobotTest
 
             toyRobot.Move(1);
 
-            Assert.AreEqual(toyRobot.CurrentLocation, new Coordinate(0, 0));
+            Assert.AreEqual(new Coordinate(0, 0), toyRobot.CurrentLocation);
         }
 
         [TestMethod]
@@ -224,7 +224,7 @@ namespace ToyRobotTest
 
             toyRobot.Move(1);
 
-            Assert.AreEqual(toyRobot.CurrentLocation, new Coordinate(1, 0));
+            Assert.AreEqual(new Coordinate(1, 0), toyRobot.CurrentLocation);
         }
 
 
@@ -240,7 +240,7 @@ namespace ToyRobotTest
 
             toyRobot.Move(1);
 
-            Assert.AreEqual(toyRobot.CurrentLocation, new Coordinate(25, 26));
+            Assert.AreEqual(new Coordinate(25, 26), toyRobot.CurrentLocation);
         }
 
         [TestMethod]
@@ -254,7 +254,7 @@ namespace ToyRobotTest
 
             toyRobot.Move(1);
 
-            Assert.AreEqual(toyRobot.CurrentLocation, new Coordinate(25, 24));
+            Assert.AreEqual(new Coordinate(25, 24), toyRobot.CurrentLocation);
         }
 
         [TestMethod]
@@ -268,7 +268,7 @@ namespace ToyRobotTest
 
             toyRobot.Move(1);
 
-            Assert.AreEqual(toyRobot.CurrentLocation, new Coordinate(24, 25));
+            Assert.AreEqual(new Coordinate(24, 25), toyRobot.CurrentLocation);
         }
 
         [TestMethod]
@@ -282,7 +282,7 @@ namespace ToyRobotTest
 
             toyRobot.Move(1);
 
-            Assert.AreEqual(toyRobot.CurrentLocation, new Coordinate(26, 25));
+            Assert.AreEqual(new Coordinate(26, 25), toyRobot.CurrentLocation);
         }
 
         [TestMethod]
@@ -296,7 +296,7 @@ namespace ToyRobotTest
 
             toyRobot.Move(1);
 
-            Assert.AreEqual(toyRobot.CurrentLocation, new Coordinate(48, 25));
+            Assert.AreEqual(new Coordinate(48, 25), toyRobot.CurrentLocation);
         }
 
         [TestMethod]
@@ -310,7 +310,7 @@ namespace ToyRobotTest
 
             toyRobot.Move(1);
 
-            Assert.AreEqual(toyRobot.CurrentLocation, new Coordinate(49, 25));
+            Assert.AreEqual(new Coordinate(49, 25), toyRobot.CurrentLocation);
         }
 
         [TestMethod]
@@ -324,7 +324,7 @@ namespace ToyRobotTest
 
             toyRobot.Move(1);
 
-            Assert.AreEqual(toyRobot.CurrentLocation, new Coordinate(0, 25));
+            Assert.AreEqual(new Coordinate(0, 25), toyRobot.CurrentLocation);
         }
 
         [TestMethod]
@@ -338,7 +338,7 @@ namespace ToyRobotTest
 
             toyRobot.Move(1);
 
-            Assert.AreEqual(toyRobot.CurrentLocation, new Coordinate(1, 25));
+            Assert.AreEqual(new Coordinate(1, 25), toyRobot.CurrentLocation);
         }
 
         [TestMethod]
@@ -352,7 +352,7 @@ namespace ToyRobotTest
 
             toyRobot.Move(1);
 
-            Assert.AreEqual(toyRobot.CurrentLocation, new Coordinate(25, 0));
+            Assert.AreEqual(new Coordinate(25, 0), toyRobot.CurrentLocation);
         }
 
         [TestMethod]
@@ -366,7 +366,7 @@ namespace ToyRobotTest
 
             toyRobot.Move(1);
 
-            Assert.AreEqual(toyRobot.CurrentLocation, new Coordinate(25, 1));
+            Assert.AreEqual(new Coordinate(25, 1), toyRobot.CurrentLocation);
         }
 
         [TestMethod]
@@ -380,7 +380,7 @@ namespace ToyRobotTest
 
             toyRobot.Move(1);
 
-            Assert.AreEqual(toyRobot.CurrentLocation, new Coordinate(25, 48));
+            Assert.AreEqual(new Coordinate(25, 48), toyRobot.CurrentLocation);
         }
 
         [TestMethod]
@@ -394,7 +394,7 @@ namespace ToyRobotTest
 
             toyRobot.Move(1);
 
-            Assert.AreEqual(toyRobot.CurrentLocation, new Coordinate(25, 49));
+            Assert.AreEqual(new Coordinate(25, 49), toyRobot.CurrentLocation);
         }
 
 
