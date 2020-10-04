@@ -56,16 +56,5 @@ namespace ToyRobotTest
 
             Assert.AreEqual(Heading.EAST, simulation.ToyRobot.CurrentHeading);
         }
-
-        [TestMethod]
-        public void ControllerRefreshViewFailingTest() {
-            var simulation = new ToyRobotTableTopSimulation(5, 5);
-            var controller = new ToyRobotTableTopSimulationController(simulation);
-
-            controller.PlaceRobot(new Coordinate(0, 0), Heading.NORTH);
-
-            controller.RefreshView();
-        }
-
     }
 }

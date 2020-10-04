@@ -21,6 +21,10 @@ namespace ToyRobotExample.src.Model
         }
 
         public void Place(Coordinate location, TwoDimensionalSpace space, Heading heading) {
+            if (!space.IsValidLocation(location)) {
+                throw new ArgumentException("Attempted to place in invalid location");
+            }
+            
             CurrentLocation = location;
             CurrentSpace = space;
             CurrentHeading = heading;

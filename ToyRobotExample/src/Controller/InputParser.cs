@@ -46,25 +46,6 @@ namespace ToyRobotExample.src.Controller
             return arguments.Split(',');
         }
 
-        public static Heading ParseHeadingString(string heading) {
-
-            if (heading == "NORTH") {
-                return Heading.NORTH;
-            }
-            else if (heading == "EAST") {
-                return Heading.EAST;
-            }
-            else if (heading == "SOUTH") {
-                return Heading.SOUTH;
-            }
-            else if (heading == "WEST") {
-                return Heading.WEST;
-            }
-            else {
-                throw new FormatException($"String was not recognised as valid heading: '{heading}'");
-            }
-        }
-
         public static Coordinate ParsePlaceLocationArguments(string[] arguments) {
             try {
                 var x = int.Parse(arguments[0]);

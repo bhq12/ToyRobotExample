@@ -90,40 +90,6 @@ namespace ToyRobotTest
         }
 
         [TestMethod]
-        public void ParseHeadingStringNorth() {
-            var heading = InputParser.ParseHeadingString("NORTH");
-
-            Assert.AreEqual(Heading.NORTH, heading);
-        }
-        [TestMethod]
-        public void ParseHeadingStringEast() {
-            var heading = InputParser.ParseHeadingString("EAST");
-
-            Assert.AreEqual(Heading.EAST, heading);
-        }
-        [TestMethod]
-        public void ParseHeadingStringSouth() {
-            var heading = InputParser.ParseHeadingString("SOUTH");
-
-            Assert.AreEqual(Heading.SOUTH, heading);
-        }
-        [TestMethod]
-        public void ParseHeadingStringWest() {
-            var heading = InputParser.ParseHeadingString("WEST");
-
-            Assert.AreEqual(Heading.WEST, heading);
-        }
-        [TestMethod]
-        public void ParseHeadingStringEmptyStringThrowsError() {
-            Assert.ThrowsException<FormatException>(() => InputParser.ParseHeadingString(""));
-        }
-
-        [TestMethod]
-        public void ParseHeadingStringInvalidStringThrowsError() {
-            Assert.ThrowsException<FormatException>(() => InputParser.ParseHeadingString("this is not a valid heading that we plan on recognising"));
-        }
-
-        [TestMethod]
         public void ParsePlaceLocationArgumentsEmptyStringThrowsError() {
             Assert.ThrowsException<FormatException>(() => InputParser.ParsePlaceLocationArguments(new string[] {"", "", ""}));
         }

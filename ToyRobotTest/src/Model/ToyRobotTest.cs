@@ -1,5 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ToyRobotExample.src.Model;
+using System;
 
 namespace ToyRobotTest
 {
@@ -20,7 +21,6 @@ namespace ToyRobotTest
             Assert.AreEqual(space, toyRobot.CurrentSpace);
             Assert.AreEqual(location, toyRobot.CurrentLocation);
             Assert.AreEqual(heading, toyRobot.CurrentHeading);
-
         }
 
         [TestMethod]
@@ -39,6 +39,17 @@ namespace ToyRobotTest
             Assert.AreEqual(null, toyRobot.CurrentLocation);
             Assert.AreEqual(null, toyRobot.CurrentHeading);
 
+        }
+
+        [TestMethod]
+        public void PlaceAtInvalidLocationThrowsError() {
+            var toyRobot = new ToyRobot();
+            var space = new TableTop(1, 1);
+            var location = new Coordinate(2999, 0);
+            var heading = Heading.NORTH;
+
+            
+            Assert.ThrowsException<ArgumentException>(() => toyRobot.Place(location, space, heading));
         }
 
         [TestMethod]
