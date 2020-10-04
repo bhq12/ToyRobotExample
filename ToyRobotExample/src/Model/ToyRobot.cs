@@ -5,8 +5,7 @@ using System.Text;
 
 namespace ToyRobotExample.src.Model
 {
-    public class ToyRobot
-    {
+    public class ToyRobot {
         public Coordinate? CurrentLocation { get; private set; }
 
         public TwoDimensionalSpace? CurrentSpace { get; private set; }
@@ -31,7 +30,7 @@ namespace ToyRobotExample.src.Model
             if (!space.IsValidLocation(location)) {
                 throw new ArgumentException("Attempted to place in invalid location");
             }
-            
+
             CurrentLocation = location;
             CurrentSpace = space;
             CurrentHeading = heading;
@@ -75,10 +74,10 @@ namespace ToyRobotExample.src.Model
         /// </summary>
         /// <param name="places">The places.</param>
         public void Move(int places) {
-            if (!IsPlaced) {
+            if (!IsPlaced || CurrentLocation is null || CurrentSpace is null) {
                 return;
             }
-
+            
             var newLocation = new Coordinate(CurrentLocation.X, CurrentLocation.Y);
             switch (CurrentHeading) {
                 case Heading.NORTH:

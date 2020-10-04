@@ -18,6 +18,11 @@ namespace ToyRobotExample.src.View
         /// Print the current simulation status to console
         /// </summary>
         public void Refresh() {
+            if (!Simulation.ToyRobot.IsPlaced) {
+                Console.WriteLine($"Robot has no current location. This can be changed with the PLACE command");
+                return;
+            }
+
             var x = Simulation.ToyRobot.CurrentLocation.X;
             var y = Simulation.ToyRobot.CurrentLocation.Y;
             var heading = Simulation.ToyRobot.CurrentHeading;

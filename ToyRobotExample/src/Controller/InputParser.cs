@@ -78,8 +78,8 @@ namespace ToyRobotExample.src.Controller
                 var y = int.Parse(arguments[1]);
                 return new Coordinate(x, y);
             }
-            catch (FormatException e) {
-                throw new FormatException($"Input was not recognised as valid location. X: '{arguments[0]}', Y: {arguments[1]}");
+            catch (FormatException) {
+                throw new FormatException($"Input was not recognised as valid location. X: '{arguments[0]}', Y: '{arguments[1]}'");
             }
         }
     }
