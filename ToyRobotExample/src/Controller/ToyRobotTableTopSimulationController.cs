@@ -58,6 +58,10 @@ namespace ToyRobotExample.src.Controller
                 catch (ArgumentException e) {
                     Console.WriteLine(e.Message);
                 }
+                catch (Exception e) {
+                    Console.WriteLine("UNEXPECTED ERROR");
+                    Console.WriteLine(e.Message);
+                }
             }
         }
 
